@@ -19,7 +19,7 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname,'public')));
 
 
-app.use('/profile', router);
+app.use('/', router);
 
 app.listen(
     PORT,

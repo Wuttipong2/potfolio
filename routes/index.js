@@ -9,12 +9,12 @@ router.get('/',(req,res)=>{
 
 
 router.get('/aboutme', (req,res)=>{
-    res.render("<h3>About Me</h3>");
+    res.render("about",{myData});
   
   });
 
   router.get('/education', (req,res)=>{
-    res.send("<h3>My Education</h3>");
+    res.send("<h1>My Education</h1>");
   
   });
 
