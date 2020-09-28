@@ -2,6 +2,7 @@ const express = require('express');
 const router = require('./routes/index');
 const hbs = require('express-handlebars');
 const path = require('path');
+const PORT = process.env.PORT || 3000; 
 
 
 const app = express();
@@ -21,8 +22,9 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use('/profile', router);
 
 app.listen(
-    3000,
+    PORT,
     () => {
-        console.log("Listening to port 3000");
+      console.log(`Listening to port ${PORT}`);
     }
-);
+  );
+  
